@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
 export function Counter({ defaultValue, inc }) {
   const [counter, setCounter] = useState(defaultValue);
-
+useEffect(() =>{
+    console.log(counter)
+}, [counter])
   function handleButtonClickIncrement() {
     setCounter(counter + inc);
   }
