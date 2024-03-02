@@ -6,6 +6,7 @@ import { Clock } from "./Clock"
 import { MouseClicker } from "./MouseClicker"
 import { InteractiveWelcome } from "./InteractiveWelcome"
 import { Login } from "./Login"
+import { UncontrolledLogin } from "./UncontrolledLogin"
 
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
       <InteractiveWelcome />
       <hr></hr>
       <Login />
+      <hr></hr>
+      <UncontrolledLogin />
     </div>
   )
 }
