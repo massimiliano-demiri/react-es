@@ -14,12 +14,19 @@ export function Login(){
     function handleCheckboxChange(e){
         setCheckbox(e.target.checked)
     }
+    function handleReset(e){
+        setCheckbox(false)
+        setPassword('')
+        setUsername('')
+    }
     return(
         
         <div>
             <input type="text" value={username} onChange={handleUsernameChange}></input>
             <input type="password" value={password} onChange={handlePasswordChange}></input>
             <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange}></input>
+            {(username==='' || password==='') ? <button disabled>Login</button> : <button>Login</button> }
+            <button onClick={handleReset}>Reset</button>
         </div>
     )
 }
