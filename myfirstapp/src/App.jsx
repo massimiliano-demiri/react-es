@@ -2,6 +2,7 @@ import { AllertClock } from "./AllertClock"
 import { Hello } from "./Hello"
 import { Welcome } from "./Welcome"
 import { Counter } from "./Counter"
+import { Clock } from "./Clock"
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Welcome name="Luca" age={15}/>
       <AllertClock handlerFunction={handleButtonClick} />
       <Counter defaultValue={9} inc={2} />
+      <Clock />
     </div>
   )
 }
