@@ -2,13 +2,11 @@ export function UncontrolledLogin() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const username = e.target.elements.namedItem("username").value;
-    const password = e.target.elements.namedItem("password").value;
-    const isChecked = e.target.elements.namedItem("checkbox").checked;
+    const formData = new FormData(event.target)
     const data = {
-      username,
-      password,
-      isChecked,
+      username: formData.get('username'),
+      password: formData.get('password'),
+      isChecked: formData.get('checkbox'),
     };
     console.log(data);
   }
