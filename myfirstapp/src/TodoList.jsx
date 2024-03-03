@@ -6,7 +6,7 @@ export function TodoList() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    updateList([todos, newtodo]);
+    updateList([...todos, newtodo]);
     setTodo("");
     console.log(todos);
     console.log(newtodo);
@@ -21,12 +21,19 @@ export function TodoList() {
     updateList([]);
     setTodo("")
   }
+function handleRemoveLi(indexToRemove) {
+  updateList(todos.filter((_, index) => index !== indexToRemove));
+}
+
 
   return (
     <div>
       <ul>
         {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
+          <div key={index}>
+          <li>{todo}</li>
+          <button onClick={() => handleRemoveLi(index)}>Rimuovi</button>
+        </div>
         ))}
       </ul>
       <form onSubmit={handleSubmit} onReset={handleResetForm}>
