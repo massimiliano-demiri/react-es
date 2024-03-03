@@ -12,6 +12,7 @@ import { Mounted } from "./Mounted"
 import { TodoList } from "./TodoList"
 import { Color } from "./Color"
 import { Colors } from "./Colors"
+import { Container } from "./Container"
 
 
 function App() {
@@ -50,6 +51,9 @@ function App() {
       <hr></hr>
       <Color color={{name: 'red', id: 1}}/>
       <Colors objects={[{name: 'red', id: 1}, {name: 'green', id: 2}, {name: 'purple', id: 4}]}/>
+      <Container title={"Test Title prop"} >
+<h3>Test of Children prop</h3>
+      </Container>
     </div>
   )
 }
