@@ -7,6 +7,7 @@ import { MouseClicker } from "./MouseClicker"
 import { InteractiveWelcome } from "./InteractiveWelcome"
 import { Login } from "./Login"
 import { UncontrolledLogin } from "./UncontrolledLogin"
+import { FocusableInput } from "./FocusableInput"
 
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
       <Login />
       <hr></hr>
       <UncontrolledLogin />
+      <hr></hr>
+      <FocusableInput />
     </div>
   )
 }
