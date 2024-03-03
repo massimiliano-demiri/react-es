@@ -10,6 +10,8 @@ import { UncontrolledLogin } from "./UncontrolledLogin"
 import { FocusableInput } from "./FocusableInput"
 import { Mounted } from "./Mounted"
 import { TodoList } from "./TodoList"
+import { Color } from "./Color"
+import { Colors } from "./Colors"
 
 
 function App() {
@@ -45,6 +47,9 @@ function App() {
       <Mounted />
       <hr></hr>
       <TodoList />
+      <hr></hr>
+      <Color color={{name: 'red', id: 1}}/>
+      <Colors objects={[{name: 'red', id: 1}, {name: 'green', id: 2}, {name: 'purple', id: 4}]}/>
     </div>
   )
 }
