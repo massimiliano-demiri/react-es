@@ -2,18 +2,25 @@ import { useState } from "react";
 
 export function TodoList() {
   const [todos, updateList] = useState([]);
-  const [newtodo, setTodo] = useState('');
+  const [newtodo, setTodo] = useState("");
 
   function handleSubmit(event) {
-event.preventDefault();
-updateList([... todos, newtodo]);
-console.log(todos)
-console.log(newtodo)
+    event.preventDefault();
+    updateList([todos, newtodo]);
+    setTodo("");
+    console.log(todos);
+    console.log(newtodo);
   }
 
   function handleInputChange(event) {
-    setTodo(event.target.value)
-      }
+    setTodo(event.target.value);
+  }
+
+  function handleResetForm(event) {
+    event.preventDefault()
+    updateList([]);
+    setTodo("")
+  }
 
   return (
     <div>
@@ -22,9 +29,10 @@ console.log(newtodo)
           <li key={index}>{todo}</li>
         ))}
       </ul>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} onReset={handleResetForm}>
         <input value={newtodo} onChange={handleInputChange}></input>
         <button type="submit">Add todo</button>
+        <button type="reset">Reset</button>
       </form>
     </div>
   );
