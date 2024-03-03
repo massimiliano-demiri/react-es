@@ -9,6 +9,7 @@ import { Login } from "./Login"
 import { UncontrolledLogin } from "./UncontrolledLogin"
 import { FocusableInput } from "./FocusableInput"
 import { Mounted } from "./Mounted"
+import { TodoList } from "./TodoList"
 
 
 function App() {
@@ -42,6 +43,8 @@ function App() {
       <FocusableInput />
       <hr></hr>
       <Mounted />
+      <hr></hr>
+      <TodoList />
     </div>
   )
 }
