@@ -16,6 +16,7 @@ import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
 import { HelloWorld } from "./HelloWorld";
+import { GithubUser } from "./GithubUser";
 
 function App() {
   const [language, setLanguage] = useState("en");
@@ -34,6 +35,7 @@ function App() {
   return (
     <div>
       <Container title={"Test Title prop"}>
+        <GithubUser username='massimiliano-demiri'/>
         <LanguageContext.Provider value={language}>
           <HelloWorld />
           <Hello />
