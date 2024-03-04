@@ -12,7 +12,7 @@ export function GithubUser({ username }) {
       })
       .then(
         (json) => {
-          console.log(json);
+        //   console.log(json);
           setData(json);
         },
         [username]
